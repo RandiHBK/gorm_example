@@ -26,7 +26,7 @@ func main() {
 
 	//no preload
 	student := new(model.Student)
-	db.Take(student)
+	db.Where("id = ?", 1).Take(student)
 	pretty.Println(student)
 
 	//preload student's courses
